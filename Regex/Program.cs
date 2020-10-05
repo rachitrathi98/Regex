@@ -10,8 +10,8 @@ namespace UserRegex
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Program");
-            string fname, lname;
-            string name_pattern;
+            string fname, lname, email;
+            string name_pattern, email_pattern;
             while (true)
             {
                 Console.WriteLine("Enter your first name with first letter in capitals ");
@@ -45,6 +45,22 @@ namespace UserRegex
                 }
             }
             Console.WriteLine("Your Entered Name is " + fname + " " + lname);
+            while (true)
+            {
+                Console.WriteLine("Enter your Email-id: ");
+                email = Console.ReadLine();
+                email_pattern = @"^[A-Za-z]+[\w.+-]*[@][A-Za-z0-9]+[.][a-z]{2,}[.]?[a-z]*$";
+                Regex regex = new Regex(email_pattern);
+                if (regex.IsMatch(email))
+                {
+                    Console.WriteLine("Valid Email-Id");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Email-Id");
+                }
+            }
         }
     
     }
