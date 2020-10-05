@@ -81,7 +81,7 @@ namespace UserRegex
             {
                 Console.WriteLine("Set a password: ");
                 password = Console.ReadLine();
-                password_pattern = @"[\w]{8,}";
+                password_pattern = @"((?=.*[A-Z])(?=.*\w).{8,})";
                 Regex regex = new Regex(email_pattern);
                 if (regex.IsMatch(password))
                 {
