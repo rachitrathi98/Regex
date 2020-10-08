@@ -16,7 +16,7 @@ namespace UserRegex
             {
                 Console.WriteLine("Enter your first name with first letter in capitals ");
                 fname = Console.ReadLine();
-                name_pattern = @"^[A-Z]{1}[a-z]{2,}";
+                name_pattern = @"^[A-Z]{1}[a-z]{2,}";////First Name starts with Cap and has 3 minimum characters
                 Regex regex = new Regex(name_pattern);
                 if (regex.IsMatch(fname))
                 {
@@ -32,7 +32,7 @@ namespace UserRegex
             {
                 Console.WriteLine("Enter your last name(only first letter in CAPS): ");
                 lname = Console.ReadLine();
-                name_pattern = @"^[A-Z]{1}[a-z]{2,}";
+                name_pattern = @"^[A-Z]{1}[a-z]{2,}"; //Last Name starts with Cap and has 3 minimum characters
                 Regex regex = new Regex(name_pattern);
                 if (regex.IsMatch(lname))
                 {
