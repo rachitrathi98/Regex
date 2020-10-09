@@ -16,7 +16,7 @@ namespace UserRegex
             {
                 Console.WriteLine("Enter your first name with first letter in capitals ");
                 fname = Console.ReadLine();
-                name_pattern = @"^[A-Z]{1}[a-z]{2,}";
+                name_pattern = @"^[A-Z]{1}[a-z]{2,}";//First name starts with Cap and has minimum 3 charcaters
                 Regex regex = new Regex(name_pattern);
                 if (regex.IsMatch(fname))
                 {
@@ -32,7 +32,7 @@ namespace UserRegex
             {
                 Console.WriteLine("Enter your last name(only first letter in CAPS): ");
                 lname = Console.ReadLine();
-                name_pattern = @"^[A-Z]{1}[a-z]{2,}";
+                name_pattern = @"^[A-Z]{1}[a-z]{2,}";//First name starts with Cap and has minimum 3 charcaters
                 Regex regex = new Regex(name_pattern);
                 if (regex.IsMatch(lname))
                 {
@@ -49,8 +49,8 @@ namespace UserRegex
             {
                 Console.WriteLine("Enter your Email-id: ");
                 email = Console.ReadLine();
-                email_pattern = @"^[A-Za-z]+[\w.+-]*[@][A-Za-z0-9]+[.][a-z]{2,}[.]?[a-z]*$";
-                Regex regex = new Regex(email_pattern);
+                email_pattern = @"^[A-Za-z]+[\w.+-]*[@][A-Za-z0-9]+[.][a-z]{2,}[.]?[a-z]*$";// Has 3 mandatory parts and 2 optional Eg. abc.xyz@bl.co.in (xyz&in are optional)
+                 Regex regex = new Regex(email_pattern);
                 if (regex.IsMatch(email))
                 {
                     Console.WriteLine("Valid Email-Id");
