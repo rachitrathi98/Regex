@@ -53,7 +53,7 @@ namespace UserRegex
                 Regex regex = new Regex(email_pattern);
                 if (regex.IsMatch(email))
                 {
-                    Console.WriteLine("Valid Email-Id: "+email);
+                    Console.WriteLine("Valid Email-Id: " + email);
                     break;
                 }
                 else
@@ -65,8 +65,8 @@ namespace UserRegex
             {
                 Console.WriteLine("Enter the Valid Phone Number: ");
                 phoneNo = Console.ReadLine();
-                phone_pattern = @"^[+0-9]{2,}[\s]{1}[0-9]{10}$";
-                Regex regex = new Regex(email_pattern);
+                phone_pattern = @"^[0-9]{2}[ ][0-9]{10}$";
+                Regex regex = new Regex(phone_pattern);
                 if (regex.IsMatch(phoneNo))
                 {
                     Console.WriteLine("Valid Phone Number: " + phoneNo);
@@ -82,7 +82,7 @@ namespace UserRegex
                 Console.WriteLine("Set a password: ");
                 password = Console.ReadLine();
                 password_pattern = @"((?=.*[A-Z])(?=.*\w)(?=.*\d).{8,})";
-                Regex regex = new Regex(email_pattern);
+                Regex regex = new Regex(password_pattern);
                 if (regex.IsMatch(password))
                 {
                     Console.WriteLine("Password set Successfully");
@@ -92,7 +92,7 @@ namespace UserRegex
                 {
                     Console.WriteLine("Enter password again");
                 }
-            }
+            } 
         }
     
     }
