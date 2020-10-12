@@ -49,7 +49,7 @@ namespace UserRegex
             {
                 Console.WriteLine("Enter your Email-id: ");
                 email = Console.ReadLine();
-                email_pattern = @"^[A-Za-z]+[\w.+-]*[@][A-Za-z0-9]+[.][a-z]{2,}[.]?[a-z]*$";
+                email_pattern = @"^[A-Za-z]+[.+-]?[a-z]*[@][A-Za-z0-9]+[.][a-z]{2,}([.][a-z]{2})?$";
                 Regex regex = new Regex(email_pattern);
                 if (regex.IsMatch(email))
                 {
@@ -93,6 +93,9 @@ namespace UserRegex
                     Console.WriteLine("Enter password again");
                 }
             }
+            Console.WriteLine("Valid Entered Name is " + fname + " " + lname);
+            Console.WriteLine("Valid Entered Email-Id is " + email);
+            Console.WriteLine("Valid Entered Phone Number is " + phoneNo);
         }
     
     }
