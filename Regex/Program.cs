@@ -7,7 +7,7 @@ namespace UserRegex
 {
     public class Program
     
-    {
+    {   
         public static string fname, lname, email, phoneNo, password;
         public static string name_pattern, email_pattern, phone_pattern, password_pattern;
             public static void Main(string[] args)
@@ -20,7 +20,7 @@ namespace UserRegex
                 while (true)
                 {
                     Console.WriteLine("Enter your first name with first letter in capitals ");
-                    fname = Console.ReadLine();
+                    fname = "rachitrathi";
                     name_pattern = @"^[A-Z]{1}[a-z]{2,}";
                     Regex regex = new Regex(name_pattern);
                     if (regex.IsMatch(fname))
@@ -40,7 +40,7 @@ namespace UserRegex
                 while (true)
                 {
                     Console.WriteLine("Enter your last name(only first letter in CAPS): ");
-                    lname = Console.ReadLine();
+                    lname = "Rathirachit";
                     name_pattern = @"^[A-Z]{1}[a-z]{2,}";
                     Regex regex = new Regex(name_pattern);
                     if (regex.IsMatch(lname))
@@ -62,7 +62,7 @@ namespace UserRegex
                 while (true)
                 {
                     Console.WriteLine("Enter your Email-id: ");
-                    email = Console.ReadLine();
+                email = "rachit.rathi98@gmail.com";
                     email_pattern = @"^[A-Za-z]+[.+-]?[a-z]*[@][A-Za-z0-9]+[.][a-z]{2,}([.][a-z]{2})?$";
                     Regex regex = new Regex(email_pattern);
                     if (regex.IsMatch(email))
@@ -82,7 +82,7 @@ namespace UserRegex
                 while (true)
                 {
                     Console.WriteLine("Enter the Valid Phone Number: ");
-                    phoneNo = Console.ReadLine();
+                phoneNo = "9004025062";
                     phone_pattern = @"^[0-9]{2}[ ][0-9]{10}$";
                     Regex regex = new Regex(phone_pattern);
                     if (regex.IsMatch(phoneNo))
@@ -103,7 +103,7 @@ namespace UserRegex
                 while (true)
                 {
                     Console.WriteLine("Set a password: ");
-                    password = Console.ReadLine();
+                password = "Rachit768*";
                     password_pattern = @"(?=.*[A-Z])(?=.*\w)(?=.*\d)(?=[^@$!%*^#?&]*[@$!%*^#?&][^@$!%^*#?&]*$).{8,}$";
                     Regex regex = new Regex(password_pattern);
                     if (regex.IsMatch(password))

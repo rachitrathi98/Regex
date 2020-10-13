@@ -8,6 +8,9 @@ namespace RegexTest
     [TestClass]
     public class UnitTest1
     {
+        /// <summary>
+        /// Test for first Name.
+        /// </summary>
         [TestMethod]
         public void FirstNameTest()
         {
@@ -15,6 +18,9 @@ namespace RegexTest
             Boolean act = program.FirstNameRegex();
             Assert.AreEqual(true, act);
         }
+        /// <summary>
+        /// Test for Last Name.
+        /// </summary>
         [TestMethod]
         public void LastNameTest()
         {
@@ -22,15 +28,19 @@ namespace RegexTest
             Boolean act = program.LastNameRegex();
             Assert.AreEqual(true, act);
         }
-
+        /// <summary>
+        /// Test for Email ID.
+        /// </summary>
         [TestMethod]
         public void EmailIdTest()
         {
             Program program = new Program();
-            Boolean act = program.EmailId();
+            Boolean act = program.Email_Id();
             Assert.AreEqual(true, act);
         }
-
+        /// <summary>
+        /// Test for Phone Number.
+        /// </summary>
         [TestMethod]
         public void PhoneNumberTest()
         {
@@ -38,7 +48,9 @@ namespace RegexTest
             Boolean act = program.PhoneNumber();
             Assert.AreEqual(true, act);
         }
-
+        /// <summary>
+        /// Test for Password.
+        /// </summary>
         [TestMethod]
         public void PasswordTest()
         {
