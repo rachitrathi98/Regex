@@ -19,7 +19,7 @@ namespace UserRegex
             {
                 while (true)
                 {
-                fname = "Rachitrathi";
+                    fname = "Rachitrathi";
                     name_pattern = @"^[A-Z]{1}[a-z]{2,}";
                     Regex regex = new Regex(name_pattern);
                     if (regex.IsMatch(fname))
@@ -58,8 +58,7 @@ namespace UserRegex
             {
                 while (true)
                 {
-                    Console.WriteLine("Enter your Email-id: ");
-                     email = "rachit.rathi98@gmail.com";
+                    email = "rachit.rathi98@gmail.com";
                     email_pattern = @"^[A-Za-z]+[.+-]?[a-z]*[@][A-Za-z0-9]+[.][a-z]{2,}([.][a-z]{2})?$";
                     Regex regex = new Regex(email_pattern);
                     if (regex.IsMatch(email))
@@ -78,6 +77,7 @@ namespace UserRegex
             {
                 while (true)
                 {
+                    phoneNo = "91 9004025062";
                     phone_pattern = @"^[0-9]{2}[ ][0-9]{10}$";
                     Regex regex = new Regex(phone_pattern);
                     if (regex.IsMatch(phoneNo))
@@ -97,6 +97,7 @@ namespace UserRegex
             {
                 while (true)
                 {
+                password = "Rachit123*";
                     password_pattern = @"(?=.*[A-Z])(?=.*\w)(?=.*\d)(?=[^@$!%*^#?&]*[@$!%*^#?&][^@$!%^*#?&]*$).{8,}$";
                     Regex regex = new Regex(password_pattern);
                     if (regex.IsMatch(password))
