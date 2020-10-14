@@ -15,7 +15,7 @@ namespace RegexTest
         public void FirstNameTest()
         {
             Program program = new Program();
-            Boolean act = program.FirstNameRegex();
+            Boolean act = program.FirstNameRegex("Rachitrathi");
             Assert.AreEqual(true, act);
         }
         /// <summary>
@@ -25,7 +25,7 @@ namespace RegexTest
         public void LastNameTest()
         {
             Program program = new Program();
-            Boolean act = program.LastNameRegex();
+            Boolean act = program.LastNameRegex("Rathirachit");
             Assert.AreEqual(true, act);
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace RegexTest
         public void EmailIdTest()
         {
             Program program = new Program();
-            Boolean act = program.Email_Id();
+            Boolean act = program.Email_Id("rachit.rathi@gmail.com");
             Assert.AreEqual(true, act);
         }
         /// <summary>
@@ -45,7 +45,7 @@ namespace RegexTest
         public void PhoneNumberTest()
         {
             Program program = new Program();
-            Boolean act = program.PhoneNumber();
+            Boolean act = program.PhoneNumber("9004025062");
             Assert.AreEqual(true, act);
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace RegexTest
         public void PasswordTest()
         {
             Program program = new Program();
-            Boolean act = program.Password();
+            Boolean act = program.Password("Rachit987*");
             Assert.AreEqual(true, act);
         }
     }
