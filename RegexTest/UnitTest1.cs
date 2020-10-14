@@ -45,7 +45,7 @@ namespace RegexTest
         public void PhoneNumberTest()
         {
             Program program = new Program();
-            Boolean act = program.PhoneNumber("9004025062");
+            Boolean act = program.PhoneNumber("91 9004025062");
             Assert.AreEqual(true, act);
         }
         /// <summary>
